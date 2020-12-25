@@ -9,3 +9,5 @@ port = process.env.PORT || options.port || options.p || 3000,
 path = require('path'),
 pck = require('./package.json'),
 chalk = require('chalk');
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }))
