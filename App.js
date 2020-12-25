@@ -3,13 +3,13 @@ require('dotenv').config()
 var express = require('express'),
 app = express(),
 options  = require('minimist')(process.argv.slice(2)),
-accountSid = process.env.SID || options.sid,
-authToken = process.env.TOK || options.token,
+accountSid = process.env.SID || options.sid || options.s,
+authToken = process.env.TOK || options.token || options.t ,
 client = require('twilio')(accountSid, authToken),
 port = process.env.PORT || options.port || options.p || 3000,
 path = require('path'),
 fs = require('fs'),
-key = process.env.KEY || options.key || 'sms',
+key = process.env.KEY || options.key || options.k || 'sms',
 pck = require('./package.json'),
 chalk = require('chalk');
 app.use(express.json());
