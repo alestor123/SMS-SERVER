@@ -14,6 +14,7 @@ pck = require('./package.json'),
 chalk = require('chalk');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/github', (req,res) => {
 	res.redirect(pck.homepage)
