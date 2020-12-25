@@ -17,6 +17,9 @@ app.get('/github', (req,res) => {
 	logger.req('Redirect',req)
 })
 
+app.post('/sms', (req,res) => {
+logger.req(`Number:${req.body.number} , Message : ${req.body.message}`,req)
+})
 
 
 
