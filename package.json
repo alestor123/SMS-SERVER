@@ -1,0 +1,19 @@
+{
+  "name": "sms-server",
+  "version": "1.0.0",
+  "description": "This is a simple code for a twilio sms server",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alestor123/SMS-SERVER.git"
+  },
+  "author": "Alestor Aldous",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alestor123/SMS-SERVER/issues"
+  },
+  "homepage": "https://github.com/alestor123/SMS-SERVER#readme"
+}
