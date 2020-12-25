@@ -21,8 +21,21 @@ app.get('/github', (req,res) => {
 })
 
 app.post('/sms', (req,res) => {
-logger.req(`Number:${req.body.number} , Message : ${req.body.message}`,req)
+if(key==req.body.key){
+    res.send('Sucess')
+    client.messages
+  .create({
+     body: req.body.message,
+     from: process.env.NUM,
+     to: req.body.number
+   })
+logger.req(`Number:${req.body.number} , Message : ${req.body.message} Key: ${req.body.key} `,req)
 
+}
+else {
+    logger.err(`Number:${req.body.number} , Message : ${req.body.message} Key: ${req.body.key} Unauth `)
+    res.status(401).send('Auth Error')
+}
 })
 
 
