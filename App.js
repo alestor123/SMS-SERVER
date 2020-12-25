@@ -21,9 +21,10 @@ if(options.v || options.version){
 }
 else if (options.h || options.help) { // checking undifined args
     console.log(`
-Usage: ${pck.name} -p <Port Number> -t <Token> -s <Sid> -f <file path>
+Usage: ${pck.name} -p <Port Number> -t <Token> -s <Sid> -f <file path> -k <auth key>
 -t , --token    for setting tokn
 -s , --sid    for setting tokn
+-k , --key auth key by default it should be 'sms'
 -n , --number twilio number 
 -p , --port setting port number
 -v , --version for showing cli version
