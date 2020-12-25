@@ -8,6 +8,7 @@ authToken = process.env.TOK || options.token,
 port = process.env.PORT || options.port || options.p || 3000,
 path = require('path'),
 fs = require('fs'),
+key = process.env.KEY || options.key,
 pck = require('./package.json'),
 chalk = require('chalk');
 app.use(express.json());
