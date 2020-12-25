@@ -22,14 +22,14 @@ app.get('/github', (req,res) => {
 
 app.post('/sms', (req,res) => {
 if(key==req.body.key){
-    res.send('Sucess')
     client.messages
   .create({
      body: req.body.message,
      from: process.env.NUM,
      to: req.body.number
    })
-logger.req(`Number:${req.body.number} , Message : ${req.body.message} Key: ${req.body.key} `,req)
+res.send(`Successfully sent Number:${req.body.number} , Message : ${req.body.message}`)
+   logger.req(`Number:${req.body.number} , Message : ${req.body.message} Key: ${req.body.key} `,req)
 
 }
 else {
