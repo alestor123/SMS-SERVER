@@ -9,7 +9,7 @@ client = require('twilio')(accountSid, authToken),
 port = process.env.PORT || options.port || options.p || 3000,
 path = require('path'),
 fs = require('fs'),
-key = process.env.KEY || options.key,
+key = process.env.KEY || options.key || 'sms',
 pck = require('./package.json'),
 chalk = require('chalk');
 app.use(express.json());
@@ -21,13 +21,14 @@ if(options.v || options.version){
 }
 else if (options.h || options.help) { // checking undifined args
     console.log(`
-	Usage: ${pck.name} -p <Port Number> -t <Token> -l <Limit Number> -f <file path>
-    -t , --token    for setting tokn
-    -s , --sid    for setting tokn
-	-p , --port setting port number
-	-v , --version for showing cli version
-	-i , --issue for reporting web page (any issue or bugs)
-	-f , --fsLog for setting path for log file by default this option is not true 
+Usage: ${pck.name} -p <Port Number> -t <Token> -s <Sid> -f <file path>
+-t , --token    for setting tokn
+-s , --sid    for setting tokn
+-n , --number twilio number 
+-p , --port setting port number
+-v , --version for showing cli version
+-i , --issue for reporting web page (any issue or bugs)
+-f , --fsLog for setting path for log file by default this option is not true 
 `);
 process.exit(0)
 
