@@ -5,3 +5,6 @@ body{
   justify-content: center;
   text-align: center;
 }
+#head {
+    padding-top: 4%;
+}
