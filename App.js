@@ -7,6 +7,7 @@ accountSid = process.env.SID || options.sid,
 authToken = process.env.TOK || options.token,
 port = process.env.PORT || options.port || options.p || 3000,
 path = require('path'),
+fs = require('fs'),
 pck = require('./package.json'),
 chalk = require('chalk');
 app.use(express.json());
