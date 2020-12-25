@@ -20,6 +20,7 @@ app.get('/github', (req,res) => {
 
 
 
+app.listen(port, () => logger(`Server running at ${port}`))
 
 
 // Logger
